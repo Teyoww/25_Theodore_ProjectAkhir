@@ -1,0 +1,145 @@
+:root{
+  --dark-bg: #1a1a1a;
+  --form-bg: #222;
+  --input-bg: #fff;
+  --text-light: #fff;
+  --text-dark: #333;
+}
+
+body{
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: var(--dark-bg);
+  margin: 0;
+  padding: 0;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+.full{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 60px 20px 20px;
+}
+
+fieldset{
+  background-color: var(--form-bg);
+  border: none;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+legend{
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label{
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group textarea{
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: var(--input-bg);
+  color: var(--text-dark);
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder{
+  color: rgba(0,0,0,0.4);
+}
+
+.form-group textarea{
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-actions{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-actions input[type="submit"],
+.form-actions a{
+  padding: 10px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.form-actions input[type="submit"]{
+  background-color: #fff;
+  color: #111;
+}
+
+.form-actions input[type="submit"]:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.form-actions a{
+  background-color: rgba(255,255,255,0.1);
+  color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.form-actions a:hover{
+  background-color: rgba(255,255,255,0.15);
+}
+
+@media (max-width: 600px){
+  fieldset{
+    padding: 24px;
+  }
+  legend{
+    font-size: 22px;
+  }
+  .form-actions{
+    flex-direction: column;
+  }
+  .form-actions input[type="submit"],
+  .form-actions a{
+    width: 100%;
+  }
+}
